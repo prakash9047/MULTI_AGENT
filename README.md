@@ -47,11 +47,12 @@ cp config/secrets.env.example config/secrets.env
 # Initialize vector store
 python -m data_ingestion.embeddings --init
 
-# Start the orchestrator
-uvicorn orchestrator.main:app --reload --port 8000
 
-# Start Streamlit app
-streamlit run streamlit_app/app.py
+
+# Start Streamlit app and backend
+python start_server.py
+
+
 ```
 
 ### Docker Deployment
